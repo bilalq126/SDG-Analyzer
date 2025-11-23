@@ -53,14 +53,16 @@ def clear_session_results():
 st.title("🌱 EcoMind AI — SDG Sustainability Analyzer")
 st.markdown("_Analyze projects for Sustainable Development Goal (SDG) alignment using Google Gemini._")
 
-# Sidebar information and controls (non-persistent)
+# Sidebar information and controls (visitor-friendly)
 with st.sidebar:
     st.header("Quick Info")
     st.markdown("""
-- **Privacy:** Nothing is stored. Analysis runs in-session only.
-- **Gemini model:** Uses your Google Generative API key.
-- - To run locally: set `GOOGLE_API_KEY` environment variable or use Streamlit secrets.
+- **For visitors:** No setup required — paste your project idea in the main area and click **Analyze**. This hosted instance has the model key configured by the app owner, so you don't need to set any secrets.
+- **Privacy:** Analysis runs in-session only. No results are persisted to disk.
+- **How it helps:** Get a quick read of which SDGs your idea aligns with, potential risks, feasibility, and AI-generated recommendations.
 """)
+    st.markdown("---")
+    # Sample projects removed to avoid unexpected reruns; visitors can paste their own ideas.
     st.markdown("---")
     if st.button("Clear session outputs", key="clear_session_outputs"):
         clear_session_results()
@@ -412,7 +414,7 @@ This tool helps innovators and teams quickly evaluate how a project idea aligns 
 - The app relies on the Gemini API. API usage may incur charges.
 """)
     st.markdown("---")
-    st.markdown("**Credits**: Built by EcoMind AI template — Gemini-powered sustainability analysis.")
+    st.markdown("**Credits**: Built by EcoMind AI — Gemini-powered sustainability analysis.")
 
 # Footer small note
 st.caption("EcoMind AI — All results generated in-session by Gemini. No user data stored.")
