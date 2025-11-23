@@ -1,0 +1,14 @@
+.env
+# Notebook outputs / checkpoints
+*.ipynb
+test.ipynb
+.ipynb_checkpoints/
+# Python cache
+__pycache__/
+*.pyc
+# Virtual environment
+.venv/
+env/
+# OS files
+.DS_Store
+Thumbs.db
